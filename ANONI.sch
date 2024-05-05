@@ -1,0 +1,155 @@
+EESchema Schematic File Version 4
+LIBS:ANONI-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:R_Small r1500ohm_0.5W1
+U 1 1 634DB6C2
+P 7000 3800
+F 0 "r1500ohm_0.5W1" V 6804 3800 50  0000 C CNN
+F 1 "RB" V 6895 3800 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0414_L11.9mm_D4.5mm_P15.24mm_Horizontal" H 7000 3800 50  0001 C CNN
+F 3 "~" H 7000 3800 50  0001 C CNN
+	1    7000 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 JBici1
+U 1 1 65F61348
+P 7700 5000
+F 0 "JBici1" H 7620 5217 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 7620 5126 50  0000 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-5.0-H_1x02_P5.00mm_Horizontal" H 7700 5000 50  0001 C CNN
+F 3 "~" H 7700 5000 50  0001 C CNN
+	1    7700 5000
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 65F61636
+P 7900 5500
+F 0 "#PWR0103" H 7900 5250 50  0001 C CNN
+F 1 "GND" H 7905 5327 50  0000 C CNN
+F 2 "" H 7900 5500 50  0001 C CNN
+F 3 "" H 7900 5500 50  0001 C CNN
+	1    7900 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 JPannSol1
+U 1 1 65F5F2DF
+P 8450 3800
+F 0 "JPannSol1" H 8370 4017 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 8370 3926 50  0000 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-5.0-H_1x02_P5.00mm_Horizontal" H 8450 3800 50  0001 C CNN
+F 3 "~" H 8450 3800 50  0001 C CNN
+	1    8450 3800
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small led1
+U 1 1 65F601DD
+P 7000 4300
+F 0 "led1" V 6804 4300 50  0000 C CNN
+F 1 "LED BLU" V 6895 4300 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 7000 4300 50  0001 C CNN
+F 3 "~" H 7000 4300 50  0001 C CNN
+	1    7000 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 65F602B1
+P 7000 5250
+F 0 "#PWR0101" H 7000 5000 50  0001 C CNN
+F 1 "GND" H 7005 5077 50  0000 C CNN
+F 2 "" H 7000 5250 50  0001 C CNN
+F 3 "" H 7000 5250 50  0001 C CNN
+	1    7000 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 65F60408
+P 8650 4050
+F 0 "#PWR0102" H 8650 3800 50  0001 C CNN
+F 1 "GND" H 8655 3877 50  0000 C CNN
+F 2 "" H 8650 4050 50  0001 C CNN
+F 3 "" H 8650 4050 50  0001 C CNN
+	1    8650 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8650 3700 8650 3350
+Wire Wire Line
+	7000 3700 7000 3350
+Wire Wire Line
+	7600 4050 7000 4050
+Wire Wire Line
+	7000 3900 7000 4050
+Connection ~ 7000 4050
+Wire Wire Line
+	7000 4050 7000 4200
+Wire Wire Line
+	8650 3800 8650 4050
+$Comp
+L Diode:1N47xxA D43v1
+U 1 1 6624138C
+P 7000 4750
+F 0 "D43v1" H 7000 4966 50  0000 C CNN
+F 1 "1N47xxA" H 7000 4875 50  0000 C CNN
+F 2 "Diode_THT:D_T-1_P5.08mm_Horizontal" H 7000 4575 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85816/1n4728a.pdf" H 7000 4750 50  0001 C CNN
+	1    7000 4750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7000 4400 7000 4600
+Wire Wire Line
+	7000 4900 7000 4950
+Wire Wire Line
+	7000 3350 7900 3350
+$Comp
+L Transistor_BJT:BD139 Q1
+U 1 1 662E2A88
+P 7800 4050
+F 0 "Q1" H 7992 4096 50  0000 L CNN
+F 1 "BD139" H 7992 4005 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-126-3_Vertical" H 8000 3975 50  0001 L CIN
+F 3 "http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/CD00001225.pdf" H 7800 4050 50  0001 L CNN
+	1    7800 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7900 4250 7900 5000
+Wire Wire Line
+	7900 3850 7900 3350
+Connection ~ 7900 3350
+Wire Wire Line
+	7900 3350 8650 3350
+$Comp
+L Diode:1N4148 DProtez1
+U 1 1 662E7800
+P 7000 5100
+F 0 "DProtez1" V 7046 5021 50  0000 R CNN
+F 1 "1N4148" V 6955 5021 50  0000 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 7000 4925 50  0001 C CNN
+F 3 "http://www.nxp.com/documents/data_sheet/1N4148_1N4448.pdf" H 7000 5100 50  0001 C CNN
+	1    7000 5100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7900 5100 7900 5500
+$EndSCHEMATC
